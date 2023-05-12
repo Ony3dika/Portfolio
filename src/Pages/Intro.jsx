@@ -311,7 +311,7 @@ function Intro() {
           {({ inView, ref }) => (
             <div
               ref={ref}
-              className={`lg:basis-2/4 order-2 lg:order-1 basis-full flex flex-col justify-center ${
+              className={`lg:basis-2/4 order-2 opacity-0 lg:order-1 basis-full flex flex-col justify-center ${
                 inView ? "animate-slideleft" : "animate-slowfade"
               }`}
             >
@@ -324,10 +324,10 @@ function Intro() {
                 experience in the industry and always ready to collaborate with
                 others to achieve the best possible results.
               </p>
-             
+
               <div className='flex mt-10'>
                 <button className='bg-lime-200 text-primary rounded-full md:px-8 px-4 md:font-semibold border-2 border-lime-200 hover:bg-primary hover:text-lime-200 shadow-lg shadow-primaryDark transition-all duration-300 ease-linear py-3'>
-                  Contact Me
+                  Contact <span className="md:block hidden">Me</span>
                 </button>
                 <button className='border-2 border-gray-500 p-4 lg:mx-3 mx-2 md:mx-3 hover:bg-primary text-lime-200 transition-all duration-300 ease-in rounded-full'>
                   <a href=''>
