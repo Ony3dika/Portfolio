@@ -307,7 +307,7 @@ function Intro() {
 
       <div className='flex mt-12 flex-col lg:flex-row h-fit'>
         {/* Section 1 */}
-        <InView triggerOnce={false} threshold={0.3}>
+        <InView triggerOnce={true} threshold={0.3}>
           {({ inView, ref }) => (
             <div
               ref={ref}
@@ -327,22 +327,34 @@ function Intro() {
 
               <div className='flex mt-10'>
                 <button className='bg-lime-200 text-primary rounded-full md:px-8 px-4 md:font-semibold border-2 border-lime-200 hover:bg-primary hover:text-lime-200 shadow-lg shadow-primaryDark transition-all duration-300 ease-linear py-3'>
-                  Contact <span className="md:block hidden">Me</span>
+                  Contact <span className='md:inline hidden'>Me</span>
                 </button>
                 <button className='border-2 border-gray-500 p-4 lg:mx-3 mx-2 md:mx-3 hover:bg-primary text-lime-200 transition-all duration-300 ease-in rounded-full'>
-                  <a href=''>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://twitter.com/Ony3dikaa?t=608LPE8h2D2drcWsbRzwpA&s=09'
+                  >
                     <FaTwitter size={"1.2rem"} />
                   </a>
                 </button>
 
                 <button className='border-2 border-gray-500 p-4 lg:mx-3 mx-2 md:mx-3 hover:bg-primary text-lime-200 transition-all duration-300 ease-in rounded-full'>
-                  <a href='https://www.linkedin.com/in/onyedikachukwu-akpa-127360248'>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://www.linkedin.com/in/onyedikachukwu-akpa-127360248'
+                  >
                     <FaLinkedin size={"1.2rem"} />
                   </a>
                 </button>
 
                 <button className='border-2 border-gray-500 p-4 lg:mx-3 mx-2 md:mx-3 hover:bg-primary text-lime-200 transition-all duration-300 ease-in rounded-full'>
-                  <a href=''>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://api.whatsapp.com/send/?phone=%2B2348119233513&text&type=phone_number&app_absent=0'
+                  >
                     <FaWhatsapp size={"1.2rem"} />
                   </a>
                 </button>

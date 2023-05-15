@@ -7,6 +7,28 @@
   -webkit-text-stroke-color: #ecfccb47;
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.45em;
+  margin: 10px;
+  background-color: #091423;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #091423;
+  margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100vw;
+  background-color: rgba(0, 70, 210, 0.200);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color:  rgba(0, 70, 210, 0.600);
+}
+
 @font-face {
   font-family: Oxanium;
   src: url(./assets/Oxanium/Oxanium-VariableFont_wght.ttf);
@@ -17,7 +39,7 @@
   src: url(./assets/blackpast/ttf/blackpast-blackpast-400.ttf);
 }
 
-.blackpast{
+.blackpast {
   font-family: BlackPast;
 }
 

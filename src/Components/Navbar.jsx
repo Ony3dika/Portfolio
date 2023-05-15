@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaHome, FaUserTie, FaBriefcase } from "react-icons/fa";
 import { MdClose, MdEmail } from "react-icons/md";
 import { CgMenuMotion } from "react-icons/cg";
-import svg from "../assets/pic2.svg"
+import svg from "../assets/pic2.svg";
 
 function Nav() {
   const [menu, setMenu] = useState(false);
@@ -51,12 +51,7 @@ function Nav() {
         </button>
 
         <button className='my-3 lg:my-0 hover:bg-primaryDark hover:rounded-lg hover:text-lime-200 rounded-lg transition-all duration-300 ease-linear px-4 py-2'>
-          <a
-            href='https://www.linkedin.com/in/onyedikachukwu-akpa-127360248'
-            rel='noreferrer'
-            target={"_blank"}
-            className='flex'
-          >
+          <a href='#contact' className='flex'>
             <MdEmail size={"1.3rem"} className='mr-2' />
             Contact
           </a>
@@ -69,7 +64,11 @@ function Nav() {
           menu ? "left-0" : "left-[-100%]"
         } `}
       >
-        <img className='absolute -z-10 object-cover h-full w-full' src={svg} alt='' />
+        <img
+          className='absolute -z-10 object-cover h-full w-full'
+          src={svg}
+          alt=''
+        />
         <div className='flex my-5 px-4 justify-between'>
           <Link
             to={"/"}
