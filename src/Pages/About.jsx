@@ -57,13 +57,19 @@ function About() {
 
                 <div className='flex mt-5'>
                   <button className='hover:bg-primary text-lime-200 transition-all duration-300 ease-in rounded-full'>
-                    <a href=''>
+                    <a
+                      target='_blank'
+                      rel='noreferrer'
+                      href='https://github.com/Ony3dika'
+                    >
                       <FaGithub size={"2rem"} />
                     </a>
                   </button>
 
                   <button className='mx-4 hover:bg-primary text-lime-200 transition-all duration-300 ease-in rounded-full'>
-                    <a href=''>
+                    <a target='_blank'
+                      rel='noreferrer'
+                      href='https://www.linkedin.com/in/onyedikachukwu-akpa-127360248'>
                       <FaLinkedin size={"2rem"} />
                     </a>
                   </button>
@@ -88,9 +94,9 @@ function About() {
                   </p>
 
                   <p className='mt-5 text-white/80 text-base leading-loose'>
-                    I will bring your digital vision to life using my technical expertise to transform every
-                    detail of your design into a user-friendly and visually
-                    appealing online experience.
+                    I will bring your digital vision to life using my technical
+                    expertise to transform every detail of your design into a
+                    user-friendly and visually appealing online experience.
                   </p>
                 </div>
               </div>

@@ -2,13 +2,16 @@ import React, { useRef, useState } from "react";
 import { MdSend } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
-import {RiWhatsappFill} from "react-icons/ri"
+import { RiWhatsappFill } from "react-icons/ri";
 
 function Contact() {
   const form = useRef();
   const [message, SetMessage] = useState("");
+  const [time, setTime] = useState(false);
 
   const sendEmail = (e) => {
+    setTime(true);
+
     e.preventDefault();
     emailjs
       .sendForm(
@@ -33,9 +36,13 @@ function Contact() {
         },
         (error) => {
           console.log(error.text);
+          SetMessage("Failed To Send Email, Try Again");
         }
       );
   };
+  setTimeout(() => {
+    setTime(false);
+  }, 4000);
   return (
     <React.Fragment>
       <div
@@ -48,8 +55,8 @@ function Contact() {
 
         <section className='flex lg:flex-row flex-col justify-between pb-12 mt-5'>
           <div className='basis-5/5 relative isolate md:basis-2/5 bg-gradient-to-b from-mid to-icon/20 overflow-y-hidden  rounded-xl'>
-            <div className='w-full h-full -z-10 shape absolute'></div>
-            <div className='backdrop-blur-sm w-full h-full'>
+            <div className='w-full h-full -z-10 shape opacity-30 absolute'></div>
+            <div className='w-full h-full'>
               <div className='md:pt-10 md:mx-12 p-5'>
                 <p className='text-base font-semibold text-lime-200'>
                   Get In Touch
@@ -60,7 +67,9 @@ function Contact() {
                   insights on front-end development. I look forward to hearing
                   from you!
                 </p>
-                <p className='font-semibold text-white/80 mt-5 lg:mt-16'>Social Media</p>
+                <p className='font-semibold text-white/80 mt-5 lg:mt-16'>
+                  Social Media
+                </p>
                 <div className='flex mt-5 w-2/4 md:w-2/5 justify-between'>
                   <button className='text-lime-200 transition-all duration-300 ease-in rounded-full'>
                     <a
@@ -153,13 +162,13 @@ function Contact() {
                 </div>
               </div>
 
-              <p
-                className={`bg-mid border-2 border-lime-200 text-white/80 w-full mt-5 p-3 rounded-lg ${
-                  message === "" ? "hidden" : "block"
-                }`}
-              >
-                {message}
-              </p>
+              {time ? (
+                <p className='bg-mid border-2 border-lime-200 text-white/80 w-full mt-5 p-3 rounded-lg'>
+                  {message}
+                </p>
+              ) : (
+                ""
+              )}
 
               <button className='rounded-xl flex justify-center w-full mt-5 hover:bg-mid hover:text-lime-200 hover:border-lime-200 transition-all ease-linear duration-300 border-2 border-transparent  bg-lime-200 px-8 py-3 font-semibold text-primary'>
                 Send Message <MdSend size={"1.5rem"} className='ml-3' />
