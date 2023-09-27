@@ -47,7 +47,7 @@ function Contact() {
   return (
     <React.Fragment>
       <div
-        className='container mx-auto lg:mt-0 lg:px-10 lg:pt-8 px-5 md:px-10'
+        className='container mx-auto lg:mt-0 lg:px-10 lg:pt-8 px-5 md:px-10  pb-12'
         id='contact'
       >
         <InView threshold={0.4} triggerOnce={true}>
@@ -63,7 +63,7 @@ function Contact() {
           )}
         </InView>
 
-        <section className='flex lg:flex-row flex-col justify-between pb-12 mt-5'>
+        <section className='flex lg:flex-row flex-col justify-between mt-5'>
           <InView threshold={0.4} triggerOnce={true}>
             {({ inView, ref }) => (
               <div
