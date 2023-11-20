@@ -4,6 +4,7 @@ import img2 from "../assets/pro2.png";
 import img3 from "../assets/pro3.png";
 import img4 from "../assets/pro4.png";
 import img5 from "../assets/pro5.png";
+import img6 from "../assets/pro6.png";
 import { FaGithub, FaHtml5 } from "react-icons/fa";
 import { InView } from "react-intersection-observer";
 import {
@@ -92,6 +93,72 @@ function Projects() {
                   <button className='bg-primaryDark text-lime-200 hover:text-lime-300 transition-all duration-300 ease-linear ml-4 px-6 lg:px-10 rounded-md py-3'>
                     <a
                       href='https://cinematrix.ony3dika.vercel.app/'
+                      rel='noreferrer'
+                      target='_blank'
+                      className='flex'
+                    >
+                      Visit{" "}
+                      <BsBoxArrowUpRight className='ml-2' size={"1.5rem"} />
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </InView>
+
+        {/* ArtScape */}
+        <InView triggerOnce={true} threshold={0.3}>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className={`flex flex-col lg:flex-row lg:h-96 mt-5 border-2 border-icon/20 rounded-lg p-5 opacity-0 ${
+                inView ? "animate-slideupsmooth" : "opacity-0"
+              }`}
+            >
+              <div className='basis-full overflow-hidden rounded-xl lg:basis-2/4'>
+                <img
+                  src={img6}
+                  className='object-cover hover:scale-110 hover:cursor-pointer transition-all duration-300 ease-linear w-full h-full rounded-xl'
+                  alt=''
+                />
+              </div>
+
+              <div className='basis-full lg:basis-2/4 p-1 lg:p-5 lg:pl-10'>
+                <div className='flex justify-between items-center mt-3 lg:mt-0'>
+                  <p className='lg:text-3xl text-xl text-lime-200 font-bold'>
+                    ArtScape
+                  </p>
+
+                  <div className='flex'>
+                    <SiReact size={"1.5rem"} className='text-sky-400' />
+                    <SiTailwindcss
+                      size={"1.5rem"}
+                      className='text-sky-500 ml-4'
+                    />
+                  </div>
+                </div>
+
+                <p className='text-white/80 mt-5 text-base leading-loose'>
+                  ArtScape is an art gallery which displays popular artworks
+                  from famous artists. The gallery composes of the details of the artwork together with its author and other relevant details.
+                </p>
+
+                <div className='mt-5 flex'>
+                  <button className='bg-primaryDark text-lime-200 hover:text-lime-300 transition-all duration-300 ease-linear px-6 lg:px-10 rounded-md py-3'>
+                    <a
+                      href='https://github.com/Ony3dika/artScape'
+                      rel='noreferrer'
+                      target='_blank'
+                      className='flex'
+                    >
+                      Github <FaGithub className='ml-2' size={"1.5rem"} />
+                    </a>
+                  </button>
+
+                  <button className='bg-primaryDark text-lime-200 hover:text-lime-300 transition-all duration-300 ease-linear ml-4 px-6 lg:px-10 rounded-md py-3'>
+                    <a
+                      href='https://art-scape.vercel.app/'
                       rel='noreferrer'
                       target='_blank'
                       className='flex'
